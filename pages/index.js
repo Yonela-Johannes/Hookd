@@ -3,10 +3,13 @@ import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import Hooks from '../components/Hooks'
-import Widgets from "../components/Widgets"
+import Widgets from "../components/Widgets";
+import Signin from './auth/Signin'
 import styles from '../styles/Home.module.css'
+import Landing from './Landing'
 
 export default function Home() {
+    const user = false
     return (<div
         className={styles.container} >
         <Head>
@@ -15,11 +18,18 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar />
-        <main className="min-h-screen flex max-w-[1500px] mx-auto" >
-            <Sidebar />
-            <Hooks />
-            <Widgets />
-        </main>
+        {!user ? (
+            <main>
+                {/* <Landing /> */}
+                {/* <Signin /> */}
+            </main>
+        ) : (
+            <main className="min-h-screen flex max-w-[1500px] mx-auto" >
+                <Sidebar />
+                <Hooks />
+                {/* <Widgets /> */}
+            </main>
+        )}
     </div >
     )
 }
