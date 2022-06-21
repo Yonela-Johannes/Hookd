@@ -44,8 +44,7 @@ const UserSchema = new mongoose.Schema({
     password: {
         type: String,
         require: true,
-        min: 4,
-        max: 8,
+        min: 8,
     },
     age: {
         type: String,
@@ -71,6 +70,35 @@ const UserSchema = new mongoose.Schema({
         type: Array,
         default: [],
     },
+    quote: {
+        type: String,
+        default: "",
+        max: 50,
+    },
+    description: {
+        type: String,
+        max: 200
+    },
+    city: {
+        type: String,
+        default: "Cape Town",
+    },
+    currentTown: {
+        type: String,
+        default: ''
+    },
+    mood: {
+        type: String,
+        default: ""
+    },
+    lived: {
+        type: Array,
+        default: []
+    },
+    from: {
+        type: String,
+        default: ""
+    },
     family: {
         type: Array,
         default: []
@@ -85,15 +113,31 @@ const UserSchema = new mongoose.Schema({
         max: 10,
         default: []
     },
-    Knows: {
+    knows: {
         type: Array,
         default: []
     },
-    Hookd: {
+    knownby: {
+        type: Array,
+        default: []
+    },
+    seen: {
+        type: Array,
+        default: []
+    },
+    sawby: {
+        type: Array,
+        default: []
+    },
+    hookd: {
         type: Array,
         default: []
     },
     snatched: {
+        type: Array,
+        default: []
+    },
+    snatchers: {
         type: Array,
         default: []
     },
@@ -105,6 +149,8 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     }
-});
+},
+    { timestamps: true }
+);
 
-module.exports = UserSchema;
+module.exports = mongoose.model("User", UserSchema);

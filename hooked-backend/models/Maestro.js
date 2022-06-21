@@ -71,6 +71,31 @@ const MaestroSchema = new mongoose.Schema({
         type: Array,
         default: [],
     },
+    quote: {
+        type: String,
+        default: "",
+        max: 50
+    },
+    description: {
+        type: String,
+        max: 200
+    },
+    city: {
+        type: String,
+        default: "Cape Town",
+    },
+    currentTown: {
+        type: String,
+        default: ''
+    },
+    from: {
+        type: String,
+        default: ""
+    },
+    lived: {
+        type: Array,
+        default: []
+    },
     family: {
         type: Array,
         default: []
@@ -117,6 +142,8 @@ const MaestroSchema = new mongoose.Schema({
         type: Array,
         default: []
     },
-});
+},
+    { timestamps: true }
+);
 
-module.exports = MaestroSchema;
+module.exports = mongoose.model("Maestro", MaestroSchema);

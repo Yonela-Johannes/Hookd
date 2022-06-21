@@ -11,8 +11,14 @@
   "dependencies": {
     "@emoji-mart/data": "^1.0.1",
     "@heroicons/react": "^1.0.6",
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.0",
     "emoji-mart": "^5.0.0",
+    "express": "^4.18.1",
     "firebase": "^9.7.0",
+    "helmet": "^5.0.2",
+    "mongoose": "^6.3.2",
+    "morgan": "^1.10.0",
     "next": "12.1.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
@@ -24,5 +30,18 @@
     "eslint-config-next": "12.1.5",
     "postcss": "^8.4.13",
     "tailwindcss": "^3.0.24"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yonela-Johannes/Hookd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yonela-Johannes/Hookd/issues"
+  },
+  "homepage": "https://github.com/Yonela-Johannes/Hookd#readme"
 }
